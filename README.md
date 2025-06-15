@@ -1,7 +1,7 @@
 //docker process
 Build the docker images
 
-→docker build  -t imsummit18/nextjs-app:1 .
+→docker build -t imsummit18/nextjs-app:1 .
 
 or for mac plactform
 
@@ -32,26 +32,21 @@ If you want to run multiple container of same image
 
 (for this if we want to run another container in port 3001 we need to add security policies for inbound rule to expose 3001 port)
 
-
-
 FOR CICD:
 
 Generate a Persistent SSH Key Pair (if you haven't already):
 ssh-keygen -t rsa -b 4096 -C "github-ec2" -f github-actions-key
 
+#Add the Public Key to EC2
 
-Add the Public Key to EC2
 ssh -i existing-ec2.pem ubuntu@<EC2_PUBLIC_IP>
 mkdir -p ~/.ssh
 chmod 700 ~/.ssh
 nano ~/.ssh/authorized_keys
 chmod 600 ~/.ssh/authorized_keys
 
-
 Add the Private Key to GitHub Secrets
 Go to your GitHub repo → Settings → Secrets and variables → Actions
 Click “New repository secret”
 Name: EC2_KEY
-Paste the full content of github-actions-key 
-
-
+Paste the full content of github-actions-key
