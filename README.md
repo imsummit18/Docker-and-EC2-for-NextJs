@@ -36,7 +36,7 @@ FOR CICD:
 
 Generate a Persistent SSH Key Pair (if you haven't already):
 ssh-keygen -t rsa -b 4096 -C "github-ec2" -f github-actions-key
-
+    
 #Add the Public Key to EC2
 
 ssh -i existing-ec2.pem ubuntu@<EC2_PUBLIC_IP>
