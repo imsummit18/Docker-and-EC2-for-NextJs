@@ -1,5 +1,10 @@
 //docker process
 Build the docker images
+
+→docker build  -t imsummit18/nextjs-app:1 .
+
+or for mac plactform
+
 →docker buildx build --platform linux/amd64 -t imsummit18/nextjs-app:1 . (where imsummit18 is docker hub username)
 
 If we want to run it locally
